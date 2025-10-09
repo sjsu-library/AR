@@ -91,12 +91,12 @@ markers.forEach((element, index, array) => {
         }
         var myUSDZ=""
         if (element.usdz) {
-          myUSDZ=' ios-src="'+element.usdz+'" ';
+          myUSDZ='ios-src="assets/'+element.usdz+'" ';
         }
 
         var myModel = ""
         if (element.model) {
-            myModel='<model-viewer src="assets/'+element.model+myUSDZ'" autoplay ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="'+element.popupHead+'" shadow-intensity="2" max-camera-orbit="auto 90deg auto" xr-environment></model-viewer>'
+            myModel='<model-viewer src="assets/'+element.model+'" '+myUSDZ+' autoplay ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="'+element.popupHead+'" shadow-intensity="2" max-camera-orbit="auto 90deg auto" xr-environment></model-viewer>'
         }
 
          var popup = L.popup({
